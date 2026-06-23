@@ -6,7 +6,7 @@ This examples should be used as code reference only. Be cautious running any unr
 
 ## Typescript
 
-[Keeper-bots-v2](https://github.com/drift-labs/keeper-bots-v2)
+[Keeper-bots-v2](https://github.com/velocity-exchange/keeper-bots-v2)
 
 ### Perp Markets
 - perp filler
@@ -21,7 +21,7 @@ This examples should be used as code reference only. Be cautious running any unr
 
 ## Python
 
-[driftpy examples/](https://github.com/drift-labs/driftpy/tree/master/examples)
+[driftpy examples/](https://github.com/velocity-exchange/driftpy/tree/master/examples)
 
 # Examples: Atomic Place&Take
 
@@ -54,7 +54,7 @@ import {
 	getUserStatsAccountPublicKey,
 	BN,
 	OrderType,
-} from '@drift-labs/sdk';
+} from '@velocity-exchange/sdk';
 
 // Method to fetch the current top makers taking advantage of Drift's off-chain infra which can provide these. You may eventually want to keep track of the state of on-chain makers yourself.
 async function getTopMakersForPlaceAndTake({
@@ -171,7 +171,7 @@ async function makePlaceAndTakePerpOrderIx(
 }
 
 // Example: Make a LONG order for 1 SOL-PERP which will "fill-or-kill" if the entire order isn't filled atomically. 
-const driftClient = DRIFT_CLIENT; // Assume you have a Drift Client set up and ready to go, see https://drift-labs.github.io/v2-teacher/#client-initialization
+const driftClient = DRIFT_CLIENT; // Assume you have a Drift Client set up and ready to go, see https://velocity-exchange.github.io/v2-teacher/#client-initialization
 const sizeInSol = 1;
 await makePlaceAndTakePerpOrderIx(
 	PositionDirection.LONG,

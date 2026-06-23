@@ -12,7 +12,7 @@ This is the main source of orders for maintaing the orderbook.
 
 ```typescript
 import {Connection} from "@solana/web3.js";
-import {DriftClient, UserMap, Wallet, loadKeypair} from "@drift-labs/sdk";
+import {DriftClient, UserMap, Wallet, loadKeypair} from "@velocity-exchange/sdk";
 
 const connection = new Connection("https://api.mainnet-beta.solana.com", 'confirmed');
 
@@ -90,7 +90,7 @@ await user_map.subscribe()
 
 ```typescript
 import {Connection} from "@solana/web3.js";
-import {DriftClient, OrderSubscriber, Wallet, loadKeypair} from "@drift-labs/sdk";
+import {DriftClient, OrderSubscriber, Wallet, loadKeypair} from "@velocity-exchange/sdk";
 
 const connection = new Connection("https://api.mainnet-beta.solana.com", 'confirmed');
 
@@ -133,7 +133,7 @@ await orderSubscriber.subscribe();
 With a `DlobSource` you can then subscribe to the orderbook.
 
 ```typescript
-import {DLOBSubscriber} from "@drift-labs/sdk";
+import {DLOBSubscriber} from "@velocity-exchange/sdk";
 
  const dlobSubscriber = new DLOBSubscriber({
     driftClient,

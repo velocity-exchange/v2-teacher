@@ -7,7 +7,7 @@ language_tabs: # must be one of https://github.com/rouge-ruby/rouge/wiki/List-of
   - shell: http
 
 toc_footers:
-  - <a href='https://github.com/drift-labs/protocol-v2/releases/'> Release History </a>
+  - <a href='https://github.com/velocity-exchange/protocol-v2/releases/'> Release History </a>
   - <a href='https://docs.drift.trade/'> Documentation </a>
 includes:
   - examples
@@ -34,11 +34,11 @@ By using any API provided by Drift Labs, you agree to the <a href="https://docs.
 
 # Introduction
 
-Drift Protocol is an [open-sourced](https://github.com/drift-labs/protocol-v2/), decentralised exchange built on the [Solana](https://solana.com) blockchain, enabling transparent and non-custodial trading on cryptocurrencies.
+Drift Protocol is an [open-sourced](https://github.com/velocity-exchange/protocol-v2/), decentralised exchange built on the [Solana](https://solana.com) blockchain, enabling transparent and non-custodial trading on cryptocurrencies.
 
-There are language bindings in [Typescript](https://github.com/drift-labs/protocol-v2/tree/master/sdk) and [Python](https://github.com/drift-labs/driftpy)! You can view code examples in the dark area to the right, and you can switch the programming language of the examples with the tabs in the top right.
+There are language bindings in [Typescript](https://github.com/velocity-exchange/protocol-v2/tree/master/sdk) and [Python](https://github.com/velocity-exchange/driftpy)! You can view code examples in the dark area to the right, and you can switch the programming language of the examples with the tabs in the top right.
 
-This API documentation page is open sourced and available [here](https://github.com/drift-labs/v2-teacher) was created with [Slate](https://github.com/slatedocs/slate). Feel free to submit questions/comments in [Issues](https://github.com/drift-labs/v2-teacher/issues) or suggest changes as a [PR](https://github.com/drift-labs/v2-teacher/pulls).
+This API documentation page is open sourced and available [here](https://github.com/velocity-exchange/v2-teacher) was created with [Slate](https://github.com/slatedocs/slate). Feel free to submit questions/comments in [Issues](https://github.com/velocity-exchange/v2-teacher/issues) or suggest changes as a [PR](https://github.com/velocity-exchange/v2-teacher/pulls).
 
 
 ## Program Addresses
@@ -84,14 +84,14 @@ This command sets the ANCHOR_WALLET environment variable to the path of the JSON
 # Client
 
 ## Typescript
-Install @drift-labs/sdk from [npm](https://www.npmjs.com/package/@drift-labs/sdk) using yarn:
+Install @velocity-exchange/sdk from [npm](https://www.npmjs.com/package/@velocity-exchange/sdk) using yarn:
 
-`yarn add @drift-labs/sdk`
+`yarn add @velocity-exchange/sdk`
 
-Auto-generated documentation <a href="https://drift-labs.github.io/protocol-v2/sdk/">here</a>
+Auto-generated documentation <a href="https://velocity-exchange.github.io/protocol-v2/sdk/">here</a>
 
 <aside class="notice">
-  Latest TS dependencies can be found on GitHub <a href="https://github.com/drift-labs/protocol-v2/blob/master/sdk/package.json">here</a>
+  Latest TS dependencies can be found on GitHub <a href="https://github.com/velocity-exchange/protocol-v2/blob/master/sdk/package.json">here</a>
 </aside>
 
 
@@ -100,15 +100,15 @@ Install driftpy from PyPI using pip:
 
 `pip install driftpy`
 
-Auto-generated documentation <a href="https://drift-labs.github.io/driftpy/">here</a>
+Auto-generated documentation <a href="https://velocity-exchange.github.io/driftpy/">here</a>
 
 <aside class="notice">
-  Latest Python dependencies can be found on GitHub <a href="https://github.com/drift-labs/driftpy/blob/master/pyproject.toml">here</a>
+  Latest Python dependencies can be found on GitHub <a href="https://github.com/velocity-exchange/driftpy/blob/master/pyproject.toml">here</a>
 
 </aside>
 
 ## HTTP
-Use the self-hosted HTTP API [gateway](https://github.com/drift-labs/gateway)
+Use the self-hosted HTTP API [gateway](https://github.com/velocity-exchange/gateway)
 
 ## Connection
 
@@ -136,7 +136,7 @@ The connection object is used to send transactions to the Solana blockchain. It 
 ## Wallet
 
   ```typescript
-import {Wallet, loadKeypair} from "@drift-labs/sdk";
+import {Wallet, loadKeypair} from "@velocity-exchange/sdk";
 
 const keyPairFile = `${process.env.HOME}/.config/solana/my-keypair.json`;
 const wallet = new Wallet(loadKeypair(keyPairFile));
@@ -164,7 +164,7 @@ Make sure this wallet has some SOL first. SOL is used to pay for transactions an
 
 ```typescript
 import {Connection} from "@solana/web3.js";
-import {Wallet, loadKeypair, DriftClient} from "@drift-labs/sdk";
+import {Wallet, loadKeypair, DriftClient} from "@velocity-exchange/sdk";
 
 const connection = new Connection('https://api.mainnet-beta.solana.com', 'confirmed');
 
@@ -663,7 +663,7 @@ localhost:8080/v2/orders
 ```
 
 ### Setting optimal order parameters
-The Drift UI uses the Auction params endpoint to get the recommended order parameters for a market order, based on the DLOB. This endpoint is accessible [here](https://drift-labs.github.io/v2-teacher/?typescript#get-auctionparams)
+The Drift UI uses the Auction params endpoint to get the recommended order parameters for a market order, based on the DLOB. This endpoint is accessible [here](https://velocity-exchange.github.io/v2-teacher/?typescript#get-auctionparams)
 
 ### TypeScript
 | Parameter   | Description | Optional | Default |
@@ -1300,7 +1300,7 @@ Instead of having users submit transactions to the Solana network, users sign a 
 Orders have to be submitted to the Swift API: [https://swift.drift.trade]
 
 ## Order setup
-Similar to normal orders, order parameters need to be defined. Order parameters <a href="https://drift-labs.github.io/v2-teacher/#order-params">overview</a>
+Similar to normal orders, order parameters need to be defined. Order parameters <a href="https://velocity-exchange.github.io/v2-teacher/#order-params">overview</a>
 
 To pass an order to Swift, the following steps are required:  
 1. Define order parameters  
@@ -1809,12 +1809,12 @@ Leverage is the total liability value (borrows plus total perp position) divided
 
 ## Event Subscription
 
-Subscribing to Drift Events is a core component necessary to react to events happening in Drift. The Drift SDK has an [Event Subscriber](https://github.com/drift-labs/protocol-v2/blob/master/sdk/src/events/eventSubscriber.ts) class to help you do this.
+Subscribing to Drift Events is a core component necessary to react to events happening in Drift. The Drift SDK has an [Event Subscriber](https://github.com/velocity-exchange/protocol-v2/blob/master/sdk/src/events/eventSubscriber.ts) class to help you do this.
 
-You should also note that you can Serialize and Deserialize Drift Events using the [Serializer](https://github.com/drift-labs/drift-common/blob/master/common-ts/src/serializableTypes.ts#L2131) class exported from the [Drift Common library](https://github.com/drift-labs/drift-common) (`@drift/common` on npm). There are "UI" versions of the deserialized records available where the `BN` numbers have been cast into our own `BigNum` class which makes it easier to work with the numbers inside the records.
+You should also note that you can Serialize and Deserialize Drift Events using the [Serializer](https://github.com/velocity-exchange/drift-common/blob/master/common-ts/src/serializableTypes.ts#L2131) class exported from the [Drift Common library](https://github.com/velocity-exchange/drift-common) (`@drift/common` on npm). There are "UI" versions of the deserialized records available where the `BN` numbers have been cast into our own `BigNum` class which makes it easier to work with the numbers inside the records.
 
 ```typescript
-import {EventSubscriber} from "@drift-labs/sdk";
+import {EventSubscriber} from "@velocity-exchange/sdk";
 
 const options = {
   eventTypes: [
@@ -1895,7 +1895,7 @@ event_subscriber.event_emitter.new_event += lambda event: print(event)
 | options.orderBy | Whether to sort the tx in memory by the order they occurred on chain ('blockchain') or received by client ('client') | Yes | 'blockchain' |
 | options.orderDir | Whether to sort the tx in memory to be most recent ('desc') or oldest ('asc') | Yes | 'asc' |
 | options.commitment | What transaction commitment to wait for | Yes | 'confirmed' |
-| options.logProviderConfig | How to get events: RPC Polling, RPC Websocket, or the Drift Events Server                                            | Yes      | {type: polling/websocket/events-server, url?: {events_server_url}}<br><br>see [Environment Constants](https://github.com/drift-labs/drift-common/blob/master/common-ts/src/EnvironmentConstants.ts) for the Events Server URL to use |
+| options.logProviderConfig | How to get events: RPC Polling, RPC Websocket, or the Drift Events Server                                            | Yes      | {type: polling/websocket/events-server, url?: {events_server_url}}<br><br>see [Environment Constants](https://github.com/velocity-exchange/drift-common/blob/master/common-ts/src/EnvironmentConstants.ts) for the Events Server URL to use |
 | options.address | Which address to listen to events for. Defaults to drift program. | Yes | dRiftyHA39MWEi3m9aunc5MzRF1JYuBsbn6VPcn33UH |
 
 ### Python
@@ -2164,16 +2164,16 @@ it includes any accumulated interest.
 # Drift Vaults
 Drift Vaults are permissionless programs that let users deposit and withdraw tokens from a shared pool managed by a single delegate. The delegate can only place or cancel orders on behalf of the vault, with no access to user funds.
 
-A more indepth explanation of vaults can be found on the [wiki](https://github.com/drift-labs/drift-vaults/wiki).
+A more indepth explanation of vaults can be found on the [wiki](https://github.com/velocity-exchange/drift-vaults/wiki).
 
 ## Vault cli
 Anyone can setup their own vault with desired configuration. 
 
-The cli utility to aid in the creation of vaults, can be found [here](https://github.com/drift-labs/drift-vaults/tree/master/ts/sdk).
+The cli utility to aid in the creation of vaults, can be found [here](https://github.com/velocity-exchange/drift-vaults/tree/master/ts/sdk).
 
 ### Clone and install dependencies for the cli
 ```typescript
-git clone git@github.com:drift-labs/drift-vaults.git
+git clone git@github.com:velocity-exchange/drift-vaults.git
 cd ts/sdk
 yarn
 yarn cli --help
@@ -2327,7 +2327,7 @@ yarn cli view-vault-depositor --vault-depositor-address=<VAULT_DEPOSITOR_ADDRESS
 
 ## Vault Manager UI template
 
-The [Vaults UI Template](https://github.com/drift-labs/vaults-ui-template) is a fullstack Next.js interface for managing and interacting with Drift Vaults.
+The [Vaults UI Template](https://github.com/velocity-exchange/vaults-ui-template) is a fullstack Next.js interface for managing and interacting with Drift Vaults.
 
 - **Manager tools**: create vaults, update parameters, manage delegate settings  
 - **User interface**: deposit/withdraw, view vault and depositor history
@@ -2343,7 +2343,7 @@ To preview the quote before swapping, use `jupiterClient.getQuote(...)`.
 
 
 ``` ts
-import {JupiterClient} from '@drift-labs/sdk';
+import {JupiterClient} from '@velocity-exchange/sdk';
 const connection = new Connection("RPCurl", "confirmed");
 
 const jupiterClient = new JupiterClient({connection});

@@ -1,6 +1,6 @@
 # Orderbook/Trades (DLOB Server)
 
-Drift runs a [`dlob-server`](https://github.com/drift-labs/dlob-server) to reduce the RPC load on UI users and traders. You can access this server (or run your own!) instead of [maintaing an order book from the blockchain](#orderbook-blockchain).
+Drift runs a [`dlob-server`](https://github.com/velocity-exchange/dlob-server) to reduce the RPC load on UI users and traders. You can access this server (or run your own!) instead of [maintaing an order book from the blockchain](#orderbook-blockchain).
 
 mainnet-beta: [https://dlob.drift.trade/](https://dlob.drift.trade/)
 devnet: [https://master.dlob.drift.trade/](https://master.dlob.drift.trade/)
